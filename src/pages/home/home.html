@@ -1,14 +1,77 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+    <ion-navbar>
+     
+    </ion-navbar>
+   </ion-header>
+   
+   <ion-content padding class="bg-style">
+   
+      <form [formGroup]="userFG" (ngSubmit)="formSubmit(userFG)">
+  
+  
+    <div id="container">
+        <ion-title><p align="center" style="color:whitesmoke;">Log in</p>
+        
+        </ion-title>
+   <ion-list align="center" >
+   
+    
+    <ion-item class="bg-style">
+  
+        <ion-icon ios="ios-person-outline" item-left md="md-person" style="color:white;"></ion-icon>
+  
+        <ion-label stacked>Username</ion-label>
+        <ion-input formControlName="username" type="text"></ion-input>
+          
+        
+  
+       <ion-item no-lines *ngIf="userFG.controls['username'].invalid">
+  
+          
+                  <p ion-text color="danger">Please Provide a valid username with 5 or more characters</p>
+              </ion-item>
+   
+    </ion-item>
+    <ion-item class="bg-style">
+        <ion-icon ios="ios-lock-outline" item-left md="md-lock" style="color:white;" ></ion-icon>
+  
+       <ion-label stacked>password</ion-label>
+              <ion-input formControlName="password" type="password"></ion-input>
+          
+    </ion-item>
+   
+   </ion-list>
+   
+   <!-- <button full ion-button (Click) = "submit()">Save</button> -->
+   <button ion-button color="light" (click)="submit()">Save</button>
+   
+   
+  <p align="center" style="color:white;">-or-</p>
+  
+  <ion-row>
+    
+      <ion-col width-30 style="text-align: right">
+          <p align="center"><button ion-button color="light"><ion-icon name="logo-twitter"></ion-icon></button></p>
+      </ion-col>
+  
+      <ion-col width-30 style="text-align: left">
+          <p align="center"> <button ion-button color="light" ><ion-icon name="logo-facebook"></ion-icon></button></p>
+  </ion-col>
+  <!-- <div align="center">
+  
+   <ion-icon name ="logo-facebook" item-start style="color:white;" ></ion-icon>
+  </div>
+  <div align="center">
+     <ion-icon name ="logo-twitter" item-start style="color:white;"></ion-icon>
+  </div> -->
+  
+  
+  <div>
+   <p align="center" style="color:white;">Dont have an account?</p><div class="mbsc-form-group-title" align="center" style="color:white;">Sign Up</div> 
+  </div>
+  
+  </ion-row>
+   </div>
+  </form>
+   </ion-content>
+   

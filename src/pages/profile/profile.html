@@ -1,0 +1,75 @@
+<ion-header>
+    <ion-navbar>
+     
+    </ion-navbar>
+   </ion-header>
+   
+   <ion-content padding class="bg-style">
+      <ion-item class="pic"><h2><img src="./assets/imgs/pic.png" width="300"height="200"></h2></ion-item>
+
+      <form [formGroup]="userFG" (ngSubmit)="formSubmit(userFG)">
+  
+  
+    <div id="container">
+        <ion-title><p align="center" style="color:whitesmoke;">Profile</p>
+        
+        </ion-title>
+        
+   <ion-list align="center" >
+   
+    
+    <ion-item class="bg-style">
+  
+      
+  
+        <ion-label stacked>name</ion-label>
+        <ion-input formControlName="name" type="text"></ion-input>
+          
+        
+  
+       <ion-item no-lines *ngIf="userFG.controls['name'].invalid">
+  
+          
+                  
+              </ion-item>
+   
+    </ion-item>
+    <ion-item class="bg-style">
+       
+       <ion-label stacked>cell Number</ion-label>
+              <ion-input formControlName="cellNo" type="cellNo"></ion-input>
+          
+    </ion-item>
+   
+    <ion-item class="bg-style">
+       
+        <ion-label stacked>work</ion-label>
+               <ion-input formControlName="work" type="work"></ion-input>
+           
+     </ion-item>
+    
+   </ion-list>
+   
+   <!-- <button full ion-button (Click) = "submit()">Save</button> -->
+   
+   
+   
+  
+  
+  
+  <!-- <div align="center">
+  
+   <ion-icon name ="logo-facebook" item-start style="color:white;" ></ion-icon>
+  </div>
+  <div align="center">
+     <ion-icon name ="logo-twitter" item-start style="color:white;"></ion-icon>
+  </div> -->
+  
+  <button ion-button color="light" (click)="edit()">Edit</button>
+  <button ion-button color="light" (click)="get()">get</button>
+  
+  
+   </div>
+  </form>
+   </ion-content>
+   
