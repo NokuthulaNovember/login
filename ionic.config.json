@@ -1,5 +1,7 @@
 {
   "name": "themeActivity",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

@@ -22,7 +22,9 @@
   
       
   
-        <ion-label stacked>name</ion-label>
+        <ion-label stacked>
+                <ion-icon ios="ios-contact" md="md-contact"></ion-icon>
+            name</ion-label>
         <ion-input formControlName="name" type="text"></ion-input>
           
         
@@ -36,14 +38,18 @@
     </ion-item>
     <ion-item class="bg-style">
        
-       <ion-label stacked>cell Number</ion-label>
-              <ion-input formControlName="cellNo" type="cellNo"></ion-input>
+       <ion-label stacked>
+            <ion-icon ios="ios-mail" md="md-mail"></ion-icon>
+           Email</ion-label>
+              <ion-input formControlName="email" type="email"></ion-input>
           
     </ion-item>
    
     <ion-item class="bg-style">
        
-        <ion-label stacked>work</ion-label>
+        <ion-label stacked> 
+                <ion-icon ios="ios-briefcase" md="md-briefcase"></ion-icon>
+            work</ion-label>
                <ion-input formControlName="work" type="work"></ion-input>
            
      </ion-item>
@@ -65,8 +71,8 @@
      <ion-icon name ="logo-twitter" item-start style="color:white;"></ion-icon>
   </div> -->
   
-  <button ion-button color="light" (click)="edit()">Edit</button>
-  <button ion-button color="light" (click)="get()">get</button>
+  <button ion-button class="p" color="light" (click)="edit()" outline round>Edit</button>
+  <button ion-button class="p"  color="light" (click)="get()" outline round>Get Tribers</button>
   
   
    </div>

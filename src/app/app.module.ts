@@ -7,9 +7,14 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ProfilePage } from '../pages/profile/profile';
-import { EditPage } from '../pages/edit/edit';
-import { TserviceProvider } from '../providers/tservice/tservice';
-import { GetPage } from '../pages/get/get';
+import { EditPage } from '../pages/edit/edit'
+
+import { Codetribe } from './service/service';
+import { TribePage } from '../pages/tribe/tribe';
+import { ListPage } from '../pages/list/list';
+
+
+
 
 
 @NgModule({
@@ -17,8 +22,10 @@ import { GetPage } from '../pages/get/get';
     MyApp,
     HomePage,
     ProfilePage,
-    GetPage,
-    EditPage
+    EditPage,
+    TribePage,
+    ListPage
+
   ],
   imports: [
     BrowserModule,
@@ -30,13 +37,19 @@ import { GetPage } from '../pages/get/get';
     HomePage,
     ProfilePage,
     EditPage,
-    GetPage
+    TribePage,
+    ListPage
+  
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Codetribe,
+    TribePage,
+    ListPage,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    TserviceProvider
+  
+    
   ]
 })
 export class AppModule {}

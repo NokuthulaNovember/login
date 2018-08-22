@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { GetPage } from './get';
+import { TribePage } from './tribe';
 
 @NgModule({
   declarations: [
-    GetPage,
+    TribePage,
   ],
   imports: [
-    IonicPageModule.forChild(GetPage),
+    IonicPageModule.forChild(TribePage),
   ],
 })
-export class GetPageModule {}
+export class TribePageModule {}

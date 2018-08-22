@@ -1,13 +1,19 @@
 page-profile {
     .bg-style {
         background-color:skyblue;  
+        color:white;
 
 }
 
 .pic{
     
    border-radius: 100%;
-   transform: rotate(300deg);
- 
+   transform: rotate(270deg);
+   background-color:skyblue;  
+
+}
+.p{
+    background-color:white;
+    color:skyblue;
 }
 }

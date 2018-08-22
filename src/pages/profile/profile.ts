@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { endTimeRange } from '../../../node_modules/@angular/core/src/profile/wtf_impl';
 import { EditPage } from '../edit/edit';
 import { FormGroup,FormControl, FormBuilder,Validators } from '../../../node_modules/@angular/forms';
-
+import { TribePage } from '../tribe/tribe';
 /**
  * Generated class for the ProfilePage page.
  *
@@ -27,13 +27,13 @@ export class ProfilePage {
   constructor(public navCtrl: NavController, public navParams: NavParams,private fb:FormBuilder) {
     this.userFG = new FormGroup({
       name: new FormControl(''),
-      cellNo: new FormControl(''),
+      email: new FormControl(''),
       work: new FormControl('')
     })
 
     this.userFG = this.fb.group({
       name:['Nokuthula November',[Validators.required,Validators.minLength(5)]],
-      cellNo:['0610735245',[Validators.required,Validators.maxLength(10)]],
+      email:['novi@gmail.com',[Validators.required,Validators.email]],
      work:['CodeTribe',[Validators.required,Validators.maxLength(10)]]
     })
   
@@ -46,6 +46,9 @@ export class ProfilePage {
     console.log(this.user);
     this.navCtrl.push(EditPage)
   }
+  get(){
+    this.navCtrl.push(TribePage)
+   }
   formSubmit({value,valid}:{value:User,valid:boolean}) {
     console.log(value);
     console.log(valid);
@@ -56,6 +59,6 @@ export class ProfilePage {
 export interface User{
   username:string;
   age:string;
-  work:string;
+  email:string;
  
   }
